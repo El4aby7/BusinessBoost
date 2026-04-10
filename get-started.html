@@ -88,20 +88,19 @@
             backdrop-filter: blur(20px);
         }
     </style>
+<script src="app.js"></script>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar (Shared Component 3) -->
 <nav class="fixed top-0 w-full z-50 bg-stone-50/60 dark:bg-zinc-950/60 backdrop-blur-md">
 <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
-<div class="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 tracking-tighter font-headline">Local Boost</div>
+<a class="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 tracking-tighter font-headline" href="index.html">Local Boost</a>
 <div class="hidden md:flex items-center gap-10">
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="#">Services</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="#">About</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="#">Contact</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="services.html">Services</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="about.html">About</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="contact.html">Contact</a>
 </div>
-<button class="bg-primary text-on-primary px-8 py-3 rounded-lg font-headline font-bold hover:opacity-80 transition-all duration-300 active:scale-95">
-            Get Started
-        </button>
+<a class="bg-primary text-on-primary px-8 py-3 rounded-lg font-headline font-bold hover:opacity-80 transition-all duration-300 active:scale-95" href="get-started.html" style="display:inline-flex;align-items:center;justify-content:center;">Get Started</a>
 </div>
 </nav>
 <main class="pt-40 pb-20 px-6 max-w-7xl mx-auto">
@@ -231,7 +230,7 @@
 <p class="text-on-surface-variant leading-relaxed text-lg">Let's give your hearth its voice. Provide the essential details that define your brand's presence.</p>
 </div>
 <div class="md:w-2/3 bg-white border border-outline/10 shadow-2xl rounded-lg p-10 md:p-20">
-<form class="space-y-12">
+<form class="space-y-12" id="get-started-form">
 <div class="space-y-4">
 <label class="block font-headline font-bold text-on-surface tracking-tight uppercase text-xs">Business Identity</label>
 <input class="w-full bg-surface-container-lowest border border-outline/10 rounded-lg px-6 py-6 focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-xl font-body placeholder:text-outline-variant" placeholder="e.g., The Midnight Bloom Florist" type="text"/>
@@ -262,16 +261,16 @@
 <span class="material-symbols-outlined text-primary text-xl" data-icon="verified">verified</span>
                                     Your progress is auto-saved and reviewed by our concierge.
                                 </p>
-<button class="w-full md:w-auto bg-primary text-on-primary px-12 py-6 rounded-lg font-headline font-bold text-xl hover:opacity-90 transition-all shadow-xl shadow-primary/20 active:scale-95" type="button">
+<button class="w-full md:w-auto bg-primary text-on-primary px-12 py-6 rounded-lg font-headline font-bold text-xl hover:opacity-90 transition-all shadow-xl shadow-primary/20 active:scale-95" id="launch-workspace-btn" type="button">
                                     Launch My Workspace
                                 </button>
+</div></div></form>
 </div>
+
 </div>
-</form>
-</div>
-</div>
-</section>
-</div>
+</section></div>
+
+
 <!-- Success Stats Bento -->
 <section class="mt-40 mb-20">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -303,20 +302,20 @@
 <footer class="w-full rounded-t-[2rem] bg-stone-100 dark:bg-zinc-900 border-t border-surface-container-low">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 max-w-7xl mx-auto">
 <div class="space-y-6">
-<div class="text-xl font-bold text-zinc-900 dark:text-zinc-50 font-headline">Local Boost</div>
+<a class="text-xl font-bold text-zinc-900 dark:text-zinc-50 font-headline" href="index.html">Local Boost</a>
 <p class="text-zinc-500 font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest leading-relaxed">The premier digital partner for high-end local businesses seeking modern excellence.</p>
 </div>
 <div class="grid grid-cols-1 gap-4">
 <h4 class="font-headline font-bold text-on-surface mb-2">Platform</h4>
-<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">Our Method</a>
-<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">Pricing</a>
-<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">Case Studies</a>
+<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="about.html">Our Method</a>
+<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="contact.html">Pricing</a>
+<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="services.html">Case Studies</a>
 </div>
 <div class="space-y-8">
 <div class="flex flex-col gap-4">
-<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">Privacy Policy</a>
-<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">Terms of Service</a>
-<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#">Cookie Policy</a>
+<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#policies">Privacy Policy</a>
+<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#policies">Terms of Service</a>
+<a class="text-zinc-500 hover:text-orange-700 dark:hover:text-orange-300 transition-colors font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest" href="#policies">Cookie Policy</a>
 </div>
 <p class="text-zinc-500 font-['Plus_Jakarta_Sans'] text-xs uppercase tracking-widest pt-8 border-t border-zinc-200 dark:border-zinc-800">
                 © 2024 Local Boost. All rights reserved.
