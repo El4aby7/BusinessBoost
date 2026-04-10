@@ -92,6 +92,24 @@
 <script src="app.js"></script>
 </head>
 <body class="bg-surface selection:bg-primary-container/30">
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-[100] bg-surface/95 backdrop-blur-sm hidden flex-col items-center justify-center space-y-8 transition-opacity duration-300 opacity-0 pointer-events-none" id="mobile-menu">
+<button class="absolute top-6 right-8 text-on-surface hover:text-primary transition-colors" id="close-menu-btn">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-3xl font-headline font-bold text-on-surface hover:text-primary transition-colors" data-i18n="nav_services" href="services.html">Services</a>
+<a class="text-3xl font-headline font-bold text-on-surface hover:text-primary transition-colors" data-i18n="nav_about" href="about.html">About</a>
+<a class="text-3xl font-headline font-bold text-on-surface hover:text-primary transition-colors" data-i18n="nav_contact" href="contact.html">Contact</a>
+<div class="flex items-center gap-6 mt-4">
+<button class="theme-toggle p-2 rounded-full bg-surface-container-high text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined theme-icon">dark_mode</span>
+</button>
+<button class="lang-toggle font-headline font-bold px-4 py-2 rounded-full bg-surface-container-high text-on-surface hover:text-primary transition-colors">
+                AR
+            </button>
+</div>
+<a class="bg-primary text-on-primary px-10 py-4 rounded-full font-headline font-bold text-xl hover:opacity-80 transition-all mt-8" data-i18n="nav_get_started" href="get-started.html">Get Started</a>
+</div>
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-stone-50/60 backdrop-blur-md">
 <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
@@ -99,11 +117,24 @@
                 Local Boost
             </a>
 <div class="hidden md:flex items-center space-x-12">
-<a class="text-orange-800 font-bold border-b-2 border-orange-800 pb-1 font-headline tracking-tight" href="services.html">Services</a>
-<a class="text-zinc-600 hover:text-zinc-900 transition-colors font-headline font-bold tracking-tight" href="about.html">About</a>
-<a class="text-zinc-600 hover:text-zinc-900 transition-colors font-headline font-bold tracking-tight" href="contact.html">Contact</a>
+<a class="text-orange-800 font-bold border-b-2 border-orange-800 pb-1 font-headline tracking-tight" data-i18n="nav_services" href="services.html">Services</a>
+<a class="text-zinc-600 hover:text-zinc-900 transition-colors font-headline font-bold tracking-tight" data-i18n="nav_about" href="about.html">About</a>
+<a class="text-zinc-600 hover:text-zinc-900 transition-colors font-headline font-bold tracking-tight" data-i18n="nav_contact" href="contact.html">Contact</a>
+
+<div class="flex items-center gap-4 border-l border-outline/20 pl-6 ml-2">
+<button class="theme-toggle p-2 rounded-full text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
+<span class="material-symbols-outlined theme-icon">dark_mode</span>
+</button>
+<button class="lang-toggle font-headline font-bold text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors">
+                AR
+            </button>
 </div>
-<a class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-bold hover:opacity-80 transition-all duration-300 active:scale-95" href="get-started.html" style="display:inline-flex;align-items:center;justify-content:center;">Get Started</a>
+</div>
+<a class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-bold hover:opacity-80 transition-all duration-300 active:scale-95 hidden md:inline-flex" data-i18n="nav_get_started" href="get-started.html" style="display:inline-flex;align-items:center;justify-content:center;">Get Started</a>
+<!-- Mobile Menu Toggle Button -->
+<button class="md:hidden text-zinc-900 dark:text-zinc-50 p-2" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
 </div>
 </nav>
 <main class="pt-32 pb-20">
@@ -204,7 +235,6 @@
                                 View Case Studies
                                 <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
 </a>
-
 <div class="md:w-1/2 bg-surface-container-low rounded-xl p-4 shadow-xl shadow-on-surface/5 rotate-3">
 <img class="rounded-lg" data-alt="Person holding a modern smartphone showing a clean minimalist mobile app interface with warm color accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBI20TPt-gVwGEynNlDZCR3C1bogq828_eZb9rwihupeKNTYROuazCXVSG02PTDDm6FtjtIbZnNdVvjbyv9rVdvGYHaXWF_aOM1muEPwC7OpRyhWJg6Qx4IUjEWpIaa4dL_WGvRWISVaxXY7OtBg0028fN842AJcExrFcYYMqJZMBguzK6f9Qq8xRhy10S3C0zZa95Vsgl-4fE8zQRB4XrycRVnJVuCYAZSObaPAAF4Lfvz8iBoMElv-S3ksbmzZf0gBg98vj4D5qz"/>
 </div>
@@ -230,7 +260,6 @@
 <div class="flex flex-col sm:flex-row justify-center gap-4">
 <a class="bg-on-primary text-primary px-10 py-5 rounded-full font-headline font-extrabold text-lg hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-95 shadow-lg shadow-black/10" href="contact.html" style="display:inline-flex;align-items:center;justify-content:center;">Book Consultation</a>
 <a class="border-2 border-on-primary/30 text-on-primary px-10 py-5 rounded-full font-headline font-extrabold text-lg hover:bg-on-primary/10 transition-all active:scale-95" href="about.html" style="display:inline-flex;align-items:center;justify-content:center;">Our Process</a>
-
 </div>
 </div>
 </div></section>
@@ -252,7 +281,7 @@
 <span class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-900 font-bold mb-2">Company</span>
 <a class="text-zinc-500 hover:text-orange-700 transition-colors uppercase text-sm tracking-widest font-label" href="about.html">About Us</a>
 <a class="text-zinc-500 hover:text-orange-700 transition-colors uppercase text-sm tracking-widest font-label" href="about.html">Careers</a>
-<a class="text-zinc-500 hover:text-orange-700 transition-colors uppercase text-sm tracking-widest font-label" href="services.html">Services</a>
+<a class="text-zinc-500 hover:text-orange-700 transition-colors uppercase text-sm tracking-widest font-label" data-i18n="nav_services" href="services.html">Services</a>
 </div>
 <div class="flex flex-col gap-4">
 <span class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-900 font-bold mb-2">Legal</span>

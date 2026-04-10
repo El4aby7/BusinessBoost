@@ -1,4 +1,39 @@
-// app.js - Main front-end functionality for Local Boost
+
+// --- Theme & Language State ---
+let currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+let currentLang = localStorage.getItem('lang') || 'en';
+
+// --- i18n Dictionary ---
+
+const i18n = {
+    en: {
+        nav_services: "Services",
+        nav_about: "About",
+        nav_contact: "Contact",
+        nav_get_started: "Get Started",
+        hero_title_1: "We Build Websites & Apps That",
+        hero_title_2: "Grow",
+        hero_title_3: "Local Businesses",
+        hero_desc: "Our digital agency specializes in bespoke digital experiences that bridge the gap between your local storefront and the global digital marketplace. We transform browsers into loyal customers.",
+        free_consultation: "Get a Free Consultation",
+        view_work: "View Our Work",
+        trusted_by: "Trusted by 200+ local owners"
+    },
+    ar: {
+        nav_services: "الخدمات",
+        nav_about: "معلومات عنا",
+        nav_contact: "اتصل بنا",
+        nav_get_started: "البدء",
+        hero_title_1: "نحن نبني مواقع وتطبيقات",
+        hero_title_2: "تنمي",
+        hero_title_3: "الأعمال المحلية",
+        hero_desc: "وكالتنا الرقمية متخصصة في التجارب الرقمية المخصصة التي تسد الفجوة بين واجهة متجرك المحلي والسوق الرقمي العالمي. نحن نحول المتصفحين إلى عملاء مخلصين.",
+        free_consultation: "احصل على استشارة مجانية",
+        view_work: "شاهد أعمالنا",
+        trusted_by: "موثوق به من قبل أكثر من 200 صاحب عمل محلي"
+    }
+};
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Mobile Menu Logic (to be wired into HTML)
@@ -11,21 +46,112 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 3. Interactive Elements (Selectable cards, etc.)
     initSelectableCards();
+
+    // 4. Theme and Language
+    initTheme();
+    initLang();
 });
 
 // --- UI Logic ---
 
 function initMobileMenu() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuBtns = document.querySelectorAll('#mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    if (mobileMenuBtns.length > 0 && mobileMenu) {
+        mobileMenuBtns.forEach(btn => btn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            // small delay for transition
+            setTimeout(() => {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Prevent body scroll
+        }));
+    }
+
+    if (closeMenuBtn && mobileMenu) {
+        closeMenuBtn.addEventListener('click', () => {
+            closeMobileMenu(mobileMenu);
+        });
+    }
+
+    // Tap outside or on a link to close
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', (e) => {
+            if (e.target === mobileMenu || e.target.tagName === 'A') {
+                closeMobileMenu(mobileMenu);
+            }
         });
     }
 }
 
+function closeMobileMenu(mobileMenu) {
+    mobileMenu.classList.remove('opacity-100');
+    mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+    }, 300);
+    document.body.style.overflow = '';
+}
+
+function initTheme() {
+    applyTheme(currentTheme);
+
+    const themeToggles = document.querySelectorAll('.theme-toggle');
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+            applyTheme(currentTheme);
+        });
+    });
+}
+
+function applyTheme(theme) {
+    const icons = document.querySelectorAll('.theme-icon');
+    if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        icons.forEach(i => i.textContent = 'light_mode');
+    } else {
+        document.documentElement.classList.remove('dark');
+        icons.forEach(i => i.textContent = 'dark_mode');
+    }
+}
+
+function initLang() {
+    applyLang(currentLang);
+
+    const langToggles = document.querySelectorAll('.lang-toggle');
+    langToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            localStorage.setItem('lang', currentLang);
+            applyLang(currentLang);
+        });
+    });
+}
+
+function applyLang(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    // Update toggle buttons text
+    const langToggles = document.querySelectorAll('.lang-toggle');
+    langToggles.forEach(toggle => {
+        toggle.textContent = lang === 'en' ? 'AR' : 'EN';
+    });
+
+    // Update texts
+    const textNodes = document.querySelectorAll('[data-i18n]');
+    textNodes.forEach(node => {
+        const key = node.getAttribute('data-i18n');
+        if (i18n[lang] && i18n[lang][key]) {
+            node.textContent = i18n[lang][key];
+        }
+    });
+}
 function initSelectableCards() {
     // Logic for step 1: Select industry
     const industryCards = document.querySelectorAll('#step-1 .group');
@@ -183,4 +309,22 @@ async function fetchData(resource) {
     console.log(`[Supabase Mock] Fetching data for '${resource}'`);
     // TODO: Replace with Supabase fetch logic
     return [];
+}
+
+// --- Additional Supabase Placeholders ---
+
+/**
+ * Placeholder for future Supabase fetch and UI render logic.
+ */
+function renderCards(data) {
+    console.log('[Supabase Mock] Rendering cards with data:', data);
+}
+
+/**
+ * Placeholder for fetching and applying admin settings.
+ */
+async function loadAdminSettings() {
+    console.log('[Supabase Mock] Loading admin settings');
+    // const settings = await fetchData('settings');
+    // applySettings(settings);
 }
