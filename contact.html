@@ -85,22 +85,21 @@
             grid-template-columns: repeat(12, 1fr);
         }
     </style>
+<script src="app.js"></script>
 </head>
 <body class="bg-surface font-body text-on-surface antialiased">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-stone-50/60 dark:bg-zinc-950/60 backdrop-blur-md">
 <div class="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
-<div class="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 tracking-tighter font-headline">
+<a class="text-2xl font-extrabold text-zinc-900 dark:text-zinc-50 tracking-tighter font-headline" href="index.html">
                 Local Boost
-            </div>
+            </a>
 <div class="hidden md:flex items-center space-x-12">
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="#">Services</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="#">About</a>
-<a class="text-orange-800 dark:text-orange-400 font-bold border-b-2 border-orange-800 dark:border-orange-400 pb-1 font-headline tracking-tight" href="#">Contact</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="services.html">Services</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors font-headline font-bold tracking-tight" href="about.html">About</a>
+<a class="text-orange-800 dark:text-orange-400 font-bold border-b-2 border-orange-800 dark:border-orange-400 pb-1 font-headline tracking-tight" href="contact.html">Contact</a>
 </div>
-<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-bold tracking-tight hover:opacity-80 transition-all duration-300 active:scale-95">
-                Get Started
-            </button>
+<a class="bg-primary text-on-primary px-8 py-3 rounded-full font-headline font-bold tracking-tight hover:opacity-80 transition-all duration-300 active:scale-95" href="get-started.html" style="display:inline-flex;align-items:center;justify-content:center;">Get Started</a>
 </div>
 </nav>
 <main class="pt-32 pb-20">
@@ -121,7 +120,7 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
 <!-- Contact Form Side -->
 <div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-xl">
-<form action="#" class="space-y-8">
+<form action="#" class="space-y-8" id="contact-form">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="space-y-2">
 <label class="text-sm font-bold tracking-widest uppercase text-on-surface-variant px-1">Full Name</label>
@@ -129,16 +128,16 @@
 </div>
 <div class="space-y-2">
 <label class="text-sm font-bold tracking-widest uppercase text-on-surface-variant px-1">Email Address</label>
-<input class="w-full bg-surface-container-high border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant" placeholder="julian@example.com" type="email"/>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant" name="email" placeholder="julian@example.com" type="email"/>
 </div>
 </div>
 <div class="space-y-2">
 <label class="text-sm font-bold tracking-widest uppercase text-on-surface-variant px-1">Subject</label>
-<input class="w-full bg-surface-container-high border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant" placeholder="Project Inquiry" type="text"/>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant" name="subject" placeholder="Project Inquiry" type="text"/>
 </div>
 <div class="space-y-2">
 <label class="text-sm font-bold tracking-widest uppercase text-on-surface-variant px-1">Message</label>
-<textarea class="w-full bg-surface-container-high border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant" placeholder="Tell us about your project goals..." rows="6"></textarea>
+<textarea class="w-full bg-surface-container-high border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all placeholder:text-outline-variant" name="message" placeholder="Tell us about your project goals..." rows="6"></textarea>
 </div>
 <button class="w-full md:w-auto bg-gradient-to-br from-primary to-primary-container text-on-primary px-12 py-5 rounded-full font-headline font-extrabold text-lg tracking-tight hover:opacity-90 transition-all duration-300 active:scale-95 shadow-lg shadow-primary/20" type="submit">
                             Send Message
@@ -225,7 +224,7 @@
 <footer class="bg-stone-100 dark:bg-zinc-900 w-full rounded-t-[2rem]">
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-20 max-w-7xl mx-auto">
 <div class="space-y-6">
-<div class="text-xl font-bold text-zinc-900 dark:text-zinc-50 font-headline">Local Boost</div>
+<a class="text-xl font-bold text-zinc-900 dark:text-zinc-50 font-headline" href="index.html">Local Boost</a>
 <p class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 leading-loose">
                     Defining the standard for local excellence. Premium digital growth for modern artisans.
                 </p>
@@ -233,17 +232,17 @@
 <div class="space-y-6">
 <h4 class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-orange-800 dark:text-orange-400 font-bold">Quick Links</h4>
 <ul class="space-y-4">
-<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="#">Services</a></li>
-<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="#">Case Studies</a></li>
-<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="#">Process</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="services.html">Services</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="services.html">Case Studies</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="about.html">Process</a></li>
 </ul>
 </div>
 <div class="space-y-6">
 <h4 class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-orange-800 dark:text-orange-400 font-bold">Legal</h4>
 <ul class="space-y-4">
-<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="#">Privacy Policy</a></li>
-<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="#">Terms of Service</a></li>
-<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="#">Cookie Policy</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="#policies">Privacy Policy</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="#policies">Terms of Service</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-sm uppercase tracking-widest text-zinc-500 hover:text-orange-700 transition-colors" href="#policies">Cookie Policy</a></li>
 </ul>
 </div>
 </div>
@@ -252,8 +251,8 @@
                 © 2024 Local Boost. All rights reserved.
             </p>
 <div class="flex gap-6">
-<a class="text-zinc-500 hover:text-orange-800 transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-<a class="text-zinc-500 hover:text-orange-800 transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="text-zinc-500 hover:text-orange-800 transition-colors" href="contact.html"><span class="material-symbols-outlined">share</span></a>
+<a class="text-zinc-500 hover:text-orange-800 transition-colors" href="contact.html"><span class="material-symbols-outlined">alternate_email</span></a>
 </div>
 </div>
 </footer>

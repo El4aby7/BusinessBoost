@@ -1,9 +1,10 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
         tailwind.config = {
@@ -86,23 +87,22 @@
             gap: 2rem;
         }
     </style>
+<script src="app.js"></script>
 </head>
 <body class="bg-background font-body text-on-surface antialiased">
 <!-- Top Navigation Bar -->
 <header class="fixed top-0 w-full z-50 bg-orange-50/60 dark:bg-stone-900/60 backdrop-blur-md tonal-shift-only">
 <nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-black text-stone-900 dark:text-orange-50 tracking-tighter font-headline" style="">
+<a class="text-2xl font-black text-stone-900 dark:text-orange-50 tracking-tighter font-headline" href="index.html" style="">
                 Local Boost
-            </div>
+            </a>
 <!-- Desktop Navigation -->
 <div class="hidden md:flex items-center space-x-8 font-plus-jakarta-sans text-sm font-semibold tracking-tight">
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-orange-100 transition-colors" href="#" style="">Services</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-orange-100 transition-colors" href="#" style="">About</a>
-<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-orange-100 transition-colors" href="#" style="">Contact</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-orange-100 transition-colors" href="services.html" style="">Services</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-orange-100 transition-colors" href="about.html" style="">About</a>
+<a class="text-stone-600 dark:text-stone-400 font-medium hover:text-stone-900 dark:hover:text-orange-100 transition-colors" href="contact.html" style="">Contact</a>
 </div>
-<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold text-sm hover:opacity-80 transition-opacity duration-200 active:scale-95" style="">
-                Get Started
-            </button>
+<a class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold text-sm hover:opacity-80 transition-opacity duration-200 active:scale-95" href="get-started.html" style="display:inline-flex;align-items:center;justify-content:center;">Get Started</a>
 </nav>
 </header>
 <main class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
@@ -111,7 +111,7 @@
 <!-- Left Column: Content -->
 <div class="w-full lg:w-1/2 flex flex-col items-start">
 <div class="mb-6 inline-flex items-center gap-2 bg-tertiary-container/30 px-4 py-1.5 rounded-full">
-<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: &quot;FILL&quot; 1;">stars</span>
+<span class="material-symbols-outlined text-tertiary text-lg" style='font-variation-settings: "FILL" 1;'>stars</span>
 <span class="text-on-tertiary-container font-label text-xs font-bold uppercase tracking-wider" style="">Serving local businesses across the country</span>
 </div>
 <h1 class="font-headline text-5xl lg:text-[4rem] font-extrabold text-on-surface leading-[1.1] tracking-tight mb-8" style="">
@@ -121,27 +121,25 @@
                     Our digital agency specializes in bespoke digital experiences that bridge the gap between your local storefront and the global digital marketplace. We transform browsers into loyal customers.
                 </p>
 <div class="flex flex-wrap gap-4 w-full sm:w-auto">
-<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline font-bold text-base flex items-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/10 active:scale-95" style="">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-headline font-bold text-base flex items-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/10 active:scale-95" href="contact.html">
                         Get a Free Consultation
                         <span class="material-symbols-outlined text-xl" style="">arrow_forward</span>
-</button>
-<button class="bg-surface-container-high text-on-surface px-8 py-4 rounded-xl font-headline font-bold text-base hover:bg-surface-container-highest transition-colors active:scale-95" style="">
-                        View Our Work
-                    </button>
+</a>
+<a class="bg-surface-container-high text-on-surface px-8 py-4 rounded-xl font-headline font-bold text-base hover:bg-surface-container-highest transition-colors active:scale-95" href="services.html" style="display:inline-flex;align-items:center;justify-content:center;">View Our Work</a>
 </div>
 <div class="mt-12 flex items-center gap-6">
 <div class="flex -space-x-3">
-<img class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="professional headshot of a smiling male client in business casual attire with soft background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuaZayHVeCOuybSqVnB-Ly3s3AERH_B05s4t8ebN4PBU3KZoJ8763_g9KUzb4J2esTZZwbDIoSfp1LOoYVvrAm2k5Lx9Ur4u3d0DURqa0d4358tUMyesxKzDKQ_BM2Xlk02XEcDcF6GkaK-iFpHBK6FW-zAPpr1WCPPVpokjpr-cp7pXuSpMrgKTOylDNbqd9gDkS1VUS7sGzIHMuQzxgD3guMGiZr5oTtZGzD2lMS19NZ7l9MUXAImrNCtcHJKUWRDrYHUgrFvY3n" style="">
-<img class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="professional headshot of a diverse female entrepreneur smiling confidently in a modern bright office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4ie9QKmy9JVlyL4DdOEjciB-g_Kga5W1r46KUGvNucXIMpWB6G5HnS5_OdG9LR635dzEd0dCw6MsuqzvCTDM35n0p-mm197zhrzIHv6Xg-UUqQyu7jvipsMF-knZ5UvRcZb7r7ytaABNQQgtbBpyusSvB17cRvNJ9q2JLvNXCIMxIbyRLK_uYJ-Zgo90JUm8dg375c_m16mfKPurV9lVQOu6J-ruIigGYiwQllODEZbDYRT_6TImO5uZ5cBulIxQLTUIudBo9yP8w" style="">
-<img class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="portrait of a focused business professional looking towards the camera with warm natural window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXakPHN1ZjfITd_Yle9QZePcMUsDxd72lDRsfUt5_Cgao8AdSwMlVmyCmh3BFrZ7Gz8E8iR2eZbpOKVvsd6pYaPC5sXectZ5Mu7fxuK-zlCiQaEOUMgQt-_qehM2XcyKRRqbSldepGIvOEXjX5WK9JLh82RjrPbQggV8DPBimo6qRB5uBduwoj_aC4SoXdz15KDh8YooC3pIg1I4QgXXzqCPOausYSGYTtwBF186dXlxfyJJ9rTxg9K27Vjdd6s-cneRre-AIyLFmG" style="">
+<img class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="professional headshot of a smiling male client in business casual attire with soft background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuaZayHVeCOuybSqVnB-Ly3s3AERH_B05s4t8ebN4PBU3KZoJ8763_g9KUzb4J2esTZZwbDIoSfp1LOoYVvrAm2k5Lx9Ur4u3d0DURqa0d4358tUMyesxKzDKQ_BM2Xlk02XEcDcF6GkaK-iFpHBK6FW-zAPpr1WCPPVpokjpr-cp7pXuSpMrgKTOylDNbqd9gDkS1VUS7sGzIHMuQzxgD3guMGiZr5oTtZGzD2lMS19NZ7l9MUXAImrNCtcHJKUWRDrYHUgrFvY3n" style=""/>
+<img class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="professional headshot of a diverse female entrepreneur smiling confidently in a modern bright office environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4ie9QKmy9JVlyL4DdOEjciB-g_Kga5W1r46KUGvNucXIMpWB6G5HnS5_OdG9LR635dzEd0dCw6MsuqzvCTDM35n0p-mm197zhrzIHv6Xg-UUqQyu7jvipsMF-knZ5UvRcZb7r7ytaABNQQgtbBpyusSvB17cRvNJ9q2JLvNXCIMxIbyRLK_uYJ-Zgo90JUm8dg375c_m16mfKPurV9lVQOu6J-ruIigGYiwQllODEZbDYRT_6TImO5uZ5cBulIxQLTUIudBo9yP8w" style=""/>
+<img class="w-10 h-10 rounded-full border-2 border-background object-cover" data-alt="portrait of a focused business professional looking towards the camera with warm natural window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXakPHN1ZjfITd_Yle9QZePcMUsDxd72lDRsfUt5_Cgao8AdSwMlVmyCmh3BFrZ7Gz8E8iR2eZbpOKVvsd6pYaPC5sXectZ5Mu7fxuK-zlCiQaEOUMgQt-_qehM2XcyKRRqbSldepGIvOEXjX5WK9JLh82RjrPbQggV8DPBimo6qRB5uBduwoj_aC4SoXdz15KDh8YooC3pIg1I4QgXXzqCPOausYSGYTtwBF186dXlxfyJJ9rTxg9K27Vjdd6s-cneRre-AIyLFmG" style=""/>
 </div>
 <div>
 <div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
+<span class="material-symbols-outlined text-secondary-fixed-dim text-sm" style='font-variation-settings: "FILL" 1;'>star</span>
 </div>
 <p class="text-xs font-semibold text-on-surface-variant" style="">Trusted by 200+ local owners</p>
 </div>
@@ -155,7 +153,7 @@
 <!-- Sleek Device Frame (Laptop) -->
 <div class="relative bg-on-surface p-1.5 rounded-xl shadow-2xl transform lg:rotate-2 hover:rotate-0 transition-transform duration-500">
 <div class="bg-surface-container-lowest rounded-lg overflow-hidden border border-outline-variant/10 aspect-[16/10]">
-<img class="w-full h-full object-cover" data-alt="modern minimalist landing page design for a local bakery shown on a laptop screen with high quality photography of pastries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDntzIIJRAUMTvdux9a4OrioiGmz23nlLhFeN-PNDKaALBhrGmYwZCjY5nFYdahf7o5hNUs5hkdZngU7MkHdOUrnmkTaCCgrQvsCijQteb53naSWybJ-e_oMP-RG9erSJPyQusjwWJ9dsiKW7plz_v2i5_aEX9lc_obKeneWWO3v94X7mc92KSIEWkBl9HD1sg-sUSQRJC6_hOPWZWtdoyyDxGx2V6xxXMQRsJYlYehQ3gokc0RI_r6PI0FJkF9TGIKrVl-DWBsrcqU" style="">
+<img class="w-full h-full object-cover" data-alt="modern minimalist landing page design for a local bakery shown on a laptop screen with high quality photography of pastries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDntzIIJRAUMTvdux9a4OrioiGmz23nlLhFeN-PNDKaALBhrGmYwZCjY5nFYdahf7o5hNUs5hkdZngU7MkHdOUrnmkTaCCgrQvsCijQteb53naSWybJ-e_oMP-RG9erSJPyQusjwWJ9dsiKW7plz_v2i5_aEX9lc_obKeneWWO3v94X7mc92KSIEWkBl9HD1sg-sUSQRJC6_hOPWZWtdoyyDxGx2V6xxXMQRsJYlYehQ3gokc0RI_r6PI0FJkF9TGIKrVl-DWBsrcqU" style=""/>
 <!-- Internal Mockup Elements -->
 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
 <!-- Floating Tablet UI Element -->
@@ -182,7 +180,7 @@
 </div>
 <!-- Floating Floating Action Indicator -->
 <div class="absolute top-1/2 -right-4 bg-tertiary text-on-tertiary p-4 rounded-2xl shadow-xl flex items-center gap-3 hidden md:flex">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">bolt</span>
+<span class="material-symbols-outlined" style='font-variation-settings: "FILL" 1;'>bolt</span>
 <div class="leading-tight">
 <p class="text-xs opacity-80 font-medium" style="">Conversion Rate</p>
 <p class="font-bold" style="">+124%</p>
@@ -211,10 +209,10 @@
                 © 2024 Local Boost Digital. Crafted for community growth.
             </div>
 <div class="flex gap-6">
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 transition-colors text-sm font-medium" href="#" style="">Privacy Policy</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 transition-colors text-sm font-medium" href="#" style="">Terms of Service</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 transition-colors text-sm font-medium" href="#" style="">Accessibility</a>
-<a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 transition-colors text-sm font-medium" href="#" style="">LinkedIn</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 transition-colors text-sm font-medium" href="#policies" style="">Privacy Policy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 transition-colors text-sm font-medium" href="#policies" style="">Terms of Service</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 transition-colors text-sm font-medium" href="#policies" style="">Accessibility</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-orange-600 transition-colors text-sm font-medium" href="https://linkedin.com" style="">LinkedIn</a>
 </div>
 </div>
 </footer>
